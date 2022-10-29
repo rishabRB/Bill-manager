@@ -11,6 +11,8 @@ function Header() {
     var sum = amounts.reduce((a,b)=>a+b)
     setAmount(sum)
   },[data])
+
+
   return (
     <header className='shadow-md bg-white sticky top-0 z-50 grid grid-cols-2 p-5 '>
     {/* Left */}

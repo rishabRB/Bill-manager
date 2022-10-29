@@ -33,6 +33,8 @@ function App() {
         <BillSection />
         </div>
       </section>
+
+      
       {/* Bill showing section */}
       <section className='p-5 shadow-sm'>
         <div className='flex flex-col md:flex-row justify-between items-center m-2'>
@@ -40,22 +42,24 @@ function App() {
         <div className='flex space-x-2 justify-center items-center md:justify-end'>
         <p>Sort By</p>
         <select onChange={(e)=>setFilterValue(e.target.value)} className='p-2 border rounded-lg outline-none '>
-                {options?.map((op)=>(
-                    <option key={op} value={op}>{op}</option>
+                {options?.map((op,index)=>(
+                    <option key={index} value={op}>{op}</option>
                 ))}
             </select>
         </div>
         </div>
         <div className='space-y-2 grid xl:grid-cols-3 lg:grid-cols-2 items-center justify-center overflow-y-scroll scrollbar-hide max-h-[500px] scrollbar-orange-500'>
-        {filterValue ? filterbill?.map((data)=>(
-          <Bill data={data}/>
+        {filterValue ? filterbill?.map((data,index)=>(
+          <Bill key={index} data={data}/>
         )):
-        datas?.map((data)=>(
-          <Bill key={data.id} data={data}/>
+        datas?.map((data,index)=>(
+          <Bill key={index} data={data}/>
         ))
       }
         </div>
       </section>
+
+
       {/* Chart Seciton */}
       <section className='h-[700px] p-5 '>
       <h2 className='uppercase tracking-[5px] mb-5'>Monthly <span className='text-orange-500'>Expense</span></h2>

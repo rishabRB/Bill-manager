@@ -9,12 +9,12 @@ function Bill({data}) {
     const dispatch = useDispatch()
     const handleClick=(id)=>{
         dispatch(deleteBill(id))
+
     }
     const handleEdit=()=>{
         setshowedit(!showedit)
     }
   return (
-    // <div >
         <div className='p-5 border w-[400px] rounded-md space-y-2'>
         <div className='flex items-center justify-between'>
         <h3 className='uppercase text-sm tracking-[2px] mr-1'>Bill's description <span className='text-orange-500'>:</span></h3>
@@ -39,7 +39,7 @@ function Bill({data}) {
         </div>
         {showedit ? 
         <div className='p-1'>
-        <BillCard id={data.id} showedit={showedit}/> 
+        <BillCard id={data.id} handleEdit={()=>handleEdit()} showedit={showedit}/> 
         </div>
         : ""}
     </div>
