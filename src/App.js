@@ -4,7 +4,7 @@ import Header from './Components/Header';
 import BillSection from './Components/BillSection'
 import Bill from './Components/Bill';
 import Chart from './Chart';
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector} from 'react-redux'
 
 
 function App() {
