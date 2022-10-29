@@ -1,9 +1,9 @@
 # Bill-Manager
 ## Features 
 * Add new bill
-* delete bill
-* edit bill
-* sort bills by category
+* Delete bill
+* Edit bill
+* Sort bills by category
 * Time-series graph that show monthly expense 
 
 ## Tech Stack
